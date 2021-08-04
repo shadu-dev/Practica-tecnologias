@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Grd_grado;
+use App\Models\Alm_alumno;
 use Illuminate\Http\Request;
 
 class alumnosController extends Controller
@@ -12,8 +14,15 @@ class alumnosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('alumnos');
+    {   
+        $grados = Grd_grado::all();
+        return view('alumnos')->with('grados', $grados);
+    }
+    
+    
+    public function getAll(){
+        $alumnos = Alm_alumno::with('grado')->orderBy('alm_id', 'desc')->simplePaginate(5);
+        return $alumnos;
     }
 
     /**
@@ -24,7 +33,14 @@ class alumnosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $alumno = new Alm_alumno;
+        $alumno->alm_nombre = $request->nombre;
+        $alumno->alm_codigo = $request->codigo;
+        $alumno->alm_edad = $request->edad;
+        $alumno->alm_sexo = $request->sexo;
+        $alumno->alm_id_grd = $request->grado;
+        $alumno->alm_observación = $request->observacion;
+        return $alumno->save();
     }
 
     /**

@@ -7,12 +7,13 @@
 @section('content')
 <div class="container py-2">
 
-    <h1>Mantenimiento de los grados</h1>
+    <h1 class="text-center" data-bs-toggle="tooltip" title="Hola">Grados</h1>
     <div class="row">
       <div class="col-md-5">
         <div class="card">
           <div class="card-body">
             <form id="formGrados" autocomplete="off">
+              <legend>Ingresar nuevo grado</legend>
               <div class="form-group">
                 <label for="gradoName" class="form-label">Nombre del grado:</label>
                 <input type="hidden" id="gradoId">
@@ -24,9 +25,9 @@
         </div>
       </div>
       <div class="col-md-7">
-        <table id="tablegrados" class="table text-center table-bordered table-sm" s>
+        <table id="tablegrados" class="table text-center table-sm">
           <thead>
-            <tr class="table-secondary">
+            <tr>
               <td>#</td>
               <td>Nombre</td>
               <td>Acciones</td>

@@ -1,7 +1,10 @@
 $(function(){
+
     let edit = false;
-    $('#gradoName').focus();
+    $('#gradoName').trigger('focus');
     obtenerGrados();
+    
+
 
     /** Funcion para obtener todas las grados */
     function obtenerGrados(){
@@ -18,8 +21,8 @@ $(function(){
                         <td>${++index}</td>
                         <td>${element.grd_nombre}</td>
                         <td>
-                        <button class="btn btn-success edit-grado">Editar</button>
-                        <button class="btn btn-danger delete-grado">Eliminar</button>
+                        <i class="bi bi-pencil btn edit-grado text-primary" title="Editar grado"></i>
+                        <i class="bi bi-archive btn delete-grado text-primary" title="Eliminar grado"></i>
                         </td>
                     </tr>
                     `;
@@ -45,7 +48,7 @@ $(function(){
         .done(function(response){
             obtenerGrados();
             console.log(response);
-                alertify.success('Grado eliminada con éxito')
+                alertify.success('Grado eliminado con éxito')
             
 
         })

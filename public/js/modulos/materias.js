@@ -1,6 +1,6 @@
 $(function(){
     let edit = false;
-    $('#materiaName').focus();
+    $('#materiaName').trigger('focus');
     obtenerMaterias();
 
     /** Funcion para obtener todas las materias */
@@ -18,8 +18,8 @@ $(function(){
                         <td>${++index}</td>
                         <td>${element.mat_nombre}</td>
                         <td>
-                        <button class="btn btn-success edit-materia">Editar</button>
-                        <button class="btn btn-danger delete-materia">Eliminar</button>
+                        <i class="bi bi-pencil btn edit-materia text-primary" title="Editar materia"></i>
+                        <i class="bi bi-archive btn delete-matearia text-primary" title="Eliminar materia"></i>
                         </td>
                     </tr>
                     `;
@@ -65,7 +65,7 @@ $(function(){
         })
         .done(function(response){
             // console.log(response);
-            $('#materiaName').focus();
+            $('#materiaName').trigger('focus');
             $('#materiaName').val(response.mat_nombre);
             $('#materiaId').val(response.mat_id)
             edit = true;

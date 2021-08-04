@@ -7,12 +7,13 @@
 @section('content')
 <div class="container py-2">
 
-    <h1>Mantenimiento de las materias</h1>
+    <h1 class="text-center">Materias</h1>
     <div class="row">
       <div class="col-md-5">
         <div class="card">
           <div class="card-body">
             <form id="formMaterias" autocomplete="off">
+              <legend>Ingresar nueva materia</legend>
               <div class="form-group">
                 <label for="materiaName" class="form-label">Nombre de materia:</label>
                 <input type="hidden" id="materiaId">
@@ -24,9 +25,9 @@
         </div>
       </div>
       <div class="col-md-7">
-        <table id="tableMaterias" class="table text-center table-bordered table-sm" s>
+        <table id="tableMaterias" class="table text-center  table-sm" s>
           <thead>
-            <tr class="table-secondary">
+            <tr >
               <td>#</td>
               <td>Nombre</td>
               <td>Acciones</td>

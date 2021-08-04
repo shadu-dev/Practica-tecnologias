@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Mxg_materiasxgrado extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'mxg_id';
 }

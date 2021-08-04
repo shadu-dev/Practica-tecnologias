@@ -17,7 +17,7 @@ use App\Http\Controllers\alumnosController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
 
 

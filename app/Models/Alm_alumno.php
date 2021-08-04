@@ -11,6 +11,6 @@ class Alm_alumno extends Model
     protected $primaryKey = 'alm_id';
 
     public function grado(){
-        return $this->belongsTo('App\Models\Grd_grado');
+        return $this->belongsTo(Grd_grado::class, 'alm_id_grd');
     }
 }
