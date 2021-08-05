@@ -89,9 +89,10 @@ $(function(){
                     <td>${alumno.alm_nombre}</td>
                     <td>${alumno.alm_codigo}</td>
                     <td>${alumno.grado.grd_nombre}</td>
-                    <td
-                    <i class="bi bi-pencil btn edit-grado text-primary" title="Editar alumno"></i>
-                    <i class="bi bi-archive btn delete-grado text-primary" title="Eliminar alumno"></i>
+                    <td>
+                    <i class="bi bi-eye btn ver-alumno text-primary" title="Ver alumno"></i>
+                    <i class="bi bi-pencil btn edit-alumno text-primary" title="Editar alumno"></i>
+                    <i class="bi bi-archive btn delete-alumno text-primary" title="Eliminar alumno"></i>
                     </td>
                     
                 </tr>
