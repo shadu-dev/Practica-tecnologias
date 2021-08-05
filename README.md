@@ -1,7 +1,21 @@
+### Vista de alumnos
+
 <p align="center"><img src="snapshot1.png" width="400"><p>
+
+*****
+
 <p align="center"><img src="snapshot3.png" width="400"><p>
+
+### Vista modal creación alumno
+
 <p align="center"><img src="snapshot2.png" width="400"><p>
+
+### Vista Materias
+
 <p align="center"><img src="snapshot4.png" width="400"><p>
+
+### Vista Grados
+
 <p align="center"><img src="snapshot5.png" width="400"><p>
 
 
